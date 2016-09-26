@@ -471,12 +471,13 @@ blockquote,.stressed {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 2.5em 0;
-    padding: 0 0 0 50px;
     color: #555;
-    border-left: none;
+    border: 1px solid #e3e3e3;
+    border-left: 5px solid #ddd;
+    padding: 0 20px;
 }
+
 blockquote:before,.stressed-quote:before {
-    content: "\201C";
     display: block;
     font-family: times;
     font-style: normal;
@@ -484,9 +485,25 @@ blockquote:before,.stressed-quote:before {
     color: #444;
     font-weight: bold;
     line-height: 30px;
-    margin-left: -50px;
     position: absolute;
 }
+
+blockquote footer cite::before {
+    content: "—";
+    padding: 0px 0.3em;
+}
+
+/* blockquote p margin */
+blockquote {
+    p {
+        margin: 1em 0 !important;
+    }
+    footer {
+        margin: 1em 0;
+        font-style: italic;
+    }
+}
+
 strong,b,em {
     font-weight: bold;
 }
@@ -496,6 +513,7 @@ pre {
 .hidden1 {
     display: none;
 }
+
 
 /* back-to-top rocket*/
 @media print, screen and (min-width: 48em) {
